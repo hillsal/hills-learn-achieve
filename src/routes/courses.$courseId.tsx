@@ -42,7 +42,7 @@ function CourseDetail() {
           <div>
             <h2 className="text-xl font-bold">What you'll learn</h2>
             <ul className="mt-2 grid gap-2 sm:grid-cols-2">
-              {course.topics.map((t) => (
+              {course.topics.map((t: string) => (
                 <li key={t} className="flex items-start gap-2 text-sm"><span className="text-primary">✓</span> {t}</li>
               ))}
             </ul>
@@ -50,7 +50,7 @@ function CourseDetail() {
           <div>
             <h2 className="text-xl font-bold">Curriculum</h2>
             <div className="mt-3 divide-y divide-border rounded-2xl border border-border bg-card">
-              {course.topics.map((t, i) => (
+              {course.topics.map((t: string, i: number) => (
                 <button key={t} onClick={() => setOpenTopic(openTopic === i ? null : i)} className="flex w-full items-center justify-between px-4 py-3 text-left">
                   <span className="text-sm font-medium">Module {i + 1}: {t}</span>
                   <span className="text-muted-foreground">{openTopic === i ? "−" : "+"}</span>
