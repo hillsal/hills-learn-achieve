@@ -130,6 +130,8 @@ function Teacher({ name }: { name: string }) {
           ))}
         </div>
 
+        <UploadZone />
+
         <div className="rounded-2xl border border-border bg-card p-6">
           <h2 className="font-bold">My Active Courses</h2>
           <div className="mt-4 overflow-x-auto">
